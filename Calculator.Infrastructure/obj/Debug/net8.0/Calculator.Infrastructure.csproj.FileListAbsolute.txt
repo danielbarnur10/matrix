@@ -1,0 +1,17 @@
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/bin/Debug/net8.0/Calculator.Infrastructure.deps.json
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/bin/Debug/net8.0/Calculator.Infrastructure.dll
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/bin/Debug/net8.0/Calculator.Infrastructure.pdb
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/bin/Debug/net8.0/Calculator.Application.dll
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/bin/Debug/net8.0/Calculator.Domain.dll
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/bin/Debug/net8.0/Calculator.Application.pdb
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/bin/Debug/net8.0/Calculator.Domain.pdb
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/obj/Debug/net8.0/Calculator.Infrastructure.csproj.AssemblyReference.cache
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/obj/Debug/net8.0/Calculator.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/obj/Debug/net8.0/Calculator.Infrastructure.AssemblyInfoInputs.cache
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/obj/Debug/net8.0/Calculator.Infrastructure.AssemblyInfo.cs
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/obj/Debug/net8.0/Calculator.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/obj/Debug/net8.0/Calculat.7C1202CC.Up2Date
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/obj/Debug/net8.0/Calculator.Infrastructure.dll
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/obj/Debug/net8.0/refint/Calculator.Infrastructure.dll
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/obj/Debug/net8.0/Calculator.Infrastructure.pdb
+/Users/danielbarnur/Desktop/matrix/Calculator.Infrastructure/obj/Debug/net8.0/ref/Calculator.Infrastructure.dll

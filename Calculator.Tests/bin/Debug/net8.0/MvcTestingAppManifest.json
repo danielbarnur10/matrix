@@ -1,0 +1,6 @@
+{
+  "Calculator.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/danielbarnur\/Desktop\/matrix\/Calculator.Api",
+  "Calculator.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/danielbarnur\/Desktop\/matrix\/Calculator.Application",
+  "Calculator.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/danielbarnur\/Desktop\/matrix\/Calculator.Domain",
+  "Calculator.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/danielbarnur\/Desktop\/matrix\/Calculator.Infrastructure"
+}

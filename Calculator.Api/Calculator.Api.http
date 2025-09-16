@@ -1,0 +1,33 @@
+@Calculator.Api_HostAddress = http://localhost:5029
+
+### Get a JWT token
+POST {{Calculator.Api_HostAddress}}/api/auth/token
+Accept: application/json
+
+###
+
+### Perform calculation (Add)
+POST {{Calculator.Api_HostAddress}}/api/calculator
+Authorization: Bearer {{JWT_TOKEN}}
+X-Operation: add
+Content-Type: application/json
+Accept: application/json
+
+{
+  "number1": 10,
+  "number2": 5
+}
+
+###
+
+### Perform calculation (Divide)
+POST {{Calculator.Api_HostAddress}}/api/calculator
+Authorization: Bearer {{JWT_TOKEN}}
+X-Operation: divide
+Content-Type: application/json
+Accept: application/json
+
+{
+  "number1": 20,
+  "number2": 4
+}

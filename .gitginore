@@ -1,0 +1,55 @@
+# Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+
+# Build output
+bin/
+obj/
+out/
+
+# User-specific
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+logs/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+artifacts/
+
+# Node (if you add frontend later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+*.opencover.xml
+*.lcov
+coverage/
+
+# Secrets (don’t commit dev keys!)
+*.secret.json
+*.secrets.json
+*.env
+
+# Publish
+wwwroot/

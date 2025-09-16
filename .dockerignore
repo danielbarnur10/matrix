@@ -1,0 +1,42 @@
+# Ignore build output
+**/bin/
+**/obj/
+**/out/
+artifacts/
+
+# User-specific files
+*.user
+*.suo
+*.swp
+*.DS_Store
+Thumbs.db
+
+# IDEs
+.vs/
+.vscode/
+.idea/
+
+# Git
+.git
+.gitignore
+
+# Logs & coverage
+*.log
+logs/
+TestResults/
+*.coverage
+*.coveragexml
+*.opencover.xml
+*.lcov
+coverage/
+
+# Node (if frontend later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Docker files themselves (we don't want to COPY them inside image)
+Dockerfile
+docker-compose.yml
+docker-compose.*.yml
+.dockerignore

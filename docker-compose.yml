@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  calculatorapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: calculatorapi
+    ports:
+      - "5029:5029"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_URLS: "http://+:5029"
+      Jwt__Issuer: "CalculatorApi"
+      Jwt__Audience: "CalculatorApiUsers"
+      Jwt__Key: "91cd14eab4046f9229e04df55cb2d29b565af53aec277e203e59d261cccd995f"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:5029/swagger" ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
