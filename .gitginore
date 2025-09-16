@@ -7,7 +7,7 @@
 bin/
 obj/
 out/
-
+*.dll
 # User-specific
 *.user
 *.suo
