@@ -211,6 +211,23 @@ dotnet add Calculator.Tests package Microsoft.NET.Test.Sdk -v 17.10.*
 - For HTTPS in Docker, you’ll need to mount dev certs (not required for this assignment).
 
 ---
+## Postman — Quick Start
+
+### 1) Import the collection & environment
+- Import **`Calculator.postman_collection.json`** (requests: Auth token, Calculator).
+- Import **`Calculator-Local.postman_environment.json`** (variables: `baseUrl`, `jwt_token`).
+
+### 2) Select the environment
+In the top-right of Postman, choose **Calculator-Local**.
+
+### 3) Get a JWT token
+Open the request **Auth - Get JWT** and click **Send**.
+Add this to the request's **Tests** tab (once), so the token is saved automatically:
+```js
+const data = pm.response.json();
+if (data && data.token) {
+  pm.environment.set("jwt_token", data.token);
+}
 
 ## License
 MIT

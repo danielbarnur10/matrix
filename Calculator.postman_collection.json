@@ -1,0 +1,198 @@
+{
+  "info": {
+    "name": "Calculator API",
+    "_postman_id": "33595f14-d8a5-4cea-9060-2919bdf042e8",
+    "description": "Postman collection for Calculator API (.NET 8 Onion) with JWT automation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth - Get JWT",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/auth/token",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "token"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const data = pm.response.json();",
+              "if (data && data.token) {",
+              "  pm.environment.set(\"jwt_token\", data.token);",
+              "  console.log(\"JWT token saved to environment\");",
+              "} else {",
+              "  console.warn('No token field found in response');",
+              "}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Calculator - Add",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Operation",
+            "value": "add",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"number1\": 10, \"number2\": 5 }"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/calculator",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "calculator"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calculator - Subtract",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Operation",
+            "value": "subtract",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"number1\": 10, \"number2\": 5 }"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/calculator",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "calculator"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calculator - Multiply",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Operation",
+            "value": "multiply",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"number1\": 3, \"number2\": 7 }"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/calculator",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "calculator"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Calculator - Divide",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jwt_token}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Operation",
+            "value": "divide",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"number1\": 20, \"number2\": 4 }"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/calculator",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "calculator"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
