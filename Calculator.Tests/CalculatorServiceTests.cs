@@ -1,7 +1,6 @@
 using Calculator.Domain.Interfaces;
 using Calculator.Infrastructure.Services;
 using FluentAssertions;
-using Xunit;
 
 public class CalculatorServiceTests
 {

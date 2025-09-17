@@ -8,12 +8,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// Onion DI (App + Infra registrations)
 builder.Services.AddInfrastructure();
 
-// JWT
 var jwt = builder.Configuration.GetSection("Jwt");
-var key = Encoding.UTF8.GetBytes(jwt["Key"] ?? "change_me_please_very_secret_key");
+var keyValue = jwt["Key"];
+
+if (string.IsNullOrWhiteSpace(keyValue))
+{
+    throw new InvalidOperationException(
+        "JWT Key is missing. Please configure Jwt:Key in settings or environment variables."
+    );
+}
+
+var key = Encoding.UTF8.GetBytes(keyValue);
 
 builder
     .Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -77,5 +84,4 @@ app.MapControllers();
 
 app.Run();
 
-// for WebApplicationFactory
 public partial class Program { }

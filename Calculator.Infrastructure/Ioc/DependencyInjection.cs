@@ -9,10 +9,8 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
-        // Domain implementations
         services.AddScoped<ICalculator, BasicCalculator>();
 
-        // Application use cases
         services.AddScoped<ICalculateUseCase, CalculateUseCase>();
 
         return services;
